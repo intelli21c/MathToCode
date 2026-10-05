@@ -1,6 +1,148 @@
-﻿<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(Pages.NotFound)">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-    </Found>
-</Router>
+﻿<div style="border: none; width:100vw; height: 100vh; display: flex; flex-direction: row;">
+    <div style="height: auto; flex-grow: 1; display: flex; flex-direction: column;">
+        <div style="flex: 3; display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; height: fit-content;">
+                <span>
+                    TeX Formula
+                </span>
+                <div>
+                    <button>Reduce</button>
+                    <button>Validate</button>
+                </div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+                <textarea style="flex: 1;">
+                    \frac{F(x, y)}{\pi}
+                </textarea>
+                <div style="flex: 1;">
+                    TexRenderer Placeholder
+                </div>
+            </div>
+        </div>
+        <div style="flex: 2; display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; height: fit-content;">
+                <div>
+                    <span>
+                        Code
+                    </span>
+                    <span>
+                        C#
+                    </span>
+                </div>
+                <div>
+                    <button>Copy</button>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <div style="height: 100%; background-color: black; color: white;">
+                    func(x, y)/Math.Pi
+                </div>
+            </div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column;">
+            <div style="height: fit-content;">
+                <span>
+                    Log
+                </span>
+            </div>
+            <div style="flex: 1; overflow-y: scroll;">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Warning</td>
+                            <td>Partial Derivative is Not supported.</td>
+                        </tr>
+                        <tr>
+                            <td>Error</td>
+                            <td>TeX Parse Error at pos 69</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div style="max-width: 15%; min-width: fit-content; height: auto; display: flex; flex-direction: column;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+            <button>Matrix Helper</button>
+            <button>TeX Symbols</button>
+            <button>Library Supports</button>
+            <button>Help</button>
+            <button>Import/Export Config</button>
+            <button>Settings</button>
+        </div>
+        <div>
+            <div>
+                <span>Language</span>
+                <select style="width: auto;">
+                    <option>C#</option>
+                    <option>C</option>
+                    <option>Python</option>
+                </select>
+            </div>
+            <div>
+                <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                    <span>Language Options</span>
+                    <button>V</button>
+                </div>
+                <div style="display:flex; flex-direction: column; max-height: 50%; overflow-y: auto;">
+                    <div>
+                        <span>Math Library Provider</span>
+                        <select style="width: auto;">
+                            <option>Math.NET</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Prefer Float over Double</span>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <span>Assume Namespace</span>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+                <div>
+                    <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                        <span>Advanced</span>
+                        <button>V</button>
+                    </div>
+                    <div>
+                        <span>Integral</span>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <span>Derivative</span>
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; overflow-y: auto;">
+            <div>
+                <span>Symbol</span>
+                <div>
+                    <span>x</span>
+                    <input />
+                </div>
+            </div>
+            <div>
+                <span>Symbol</span>
+                <div>
+                    <span>y</span>
+                    <input />
+                </div>
+            </div>
+            <div>
+                <span>Function</span>
+                <div>
+                    <span>f</span>
+                    <input />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+
+}
