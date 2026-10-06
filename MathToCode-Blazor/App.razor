@@ -1,13 +1,14 @@
 ﻿<div style="border: none; width:100vw; height: 100vh; display: flex; flex-direction: row;">
-    <div style="height: auto; flex-grow: 1; display: flex; flex-direction: column;">
-        <div style="flex: 3; display: flex; flex-direction: column;">
+    <div style="height: 100%; flex-grow: 1; display: flex; flex-direction: column;">
+        <div style="flex:3; display: flex; flex-direction: column;">
             <div style="display: flex; flex-direction: row; justify-content: space-between; height: fit-content;">
                 <span>
                     TeX Formula
                 </span>
                 <div>
+                    <button>Format</button>
                     <button>Reduce</button>
-                    <button>Validate</button>
+                    <button>Clear</button>
                 </div>
             </div>
             <div style="flex: 1; display: flex; flex-direction: column;">
@@ -26,7 +27,7 @@
                         Code
                     </span>
                     <span>
-                        C#
+                        (C# with Math.NET )
                     </span>
                 </div>
                 <div>
@@ -39,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div style="flex: 1; display: flex; flex-direction: column;">
+        <div style="flex:1; max-height: 20%; min-height: fit-content; display: flex; flex-direction: column;">
             <div style="height: fit-content;">
                 <span>
                     Log
@@ -61,18 +62,27 @@
             </div>
         </div>
     </div>
-    <div style="max-width: 15%; min-width: fit-content; height: auto; display: flex; flex-direction: column;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
-            <button>Matrix Helper</button>
-            <button>TeX Symbols</button>
-            <button>Library Supports</button>
-            <button>Help</button>
-            <button>Import/Export Config</button>
-            <button>Settings</button>
+    <div style="max-width: 15%; min-width: fit-content; height: 100%; display: flex; flex-direction: column;">
+        <div>
+            <span>Mathematics Support</span>
+            <div style="display: flex; flex-direction: row; justify-content: flex-end;">
+                <button>Matrix Helper</button>
+                <button>TeX Symbols</button>
+                <button>Library Supports</button>
+            </div>
         </div>
         <div>
+            <span>System</span>
+            <div style="display: flex; flex-direction: row; justify-content: flex-end;">
+                <button>Help</button>
+                <button>Import/Export Config</button>
+                <button>Settings</button>
+            </div>
+        </div>
+        <div>
+            <span>Language</span>
             <div>
-                <span>Language</span>
+                <span>Target Language</span>
                 <select style="width: auto;">
                     <option>C#</option>
                     <option>C</option>
@@ -116,26 +126,50 @@
                 </div>
             </div>
         </div>
-        <div style="flex: 1; display: flex; flex-direction: column; overflow-y: auto;">
-            <div>
-                <span>Symbol</span>
-                <div>
+        <div>
+            <span>Symbol Mapping</span>
+            <div style="flex: 1; display: flex; flex-direction: column; overflow-y: auto;">
+                <div style="display: flex; flex-direction: row; align-items: center;">
                     <span>x</span>
-                    <input />
+                    <div style="display: flex; flex-direction: column;">
+                        <span>Symbol</span>
+                        <div>
+                            <span>Map to: </span>
+                            <input />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <span>Symbol</span>
-                <div>
+                <div style="display: flex; flex-direction: row; align-items: center;">
                     <span>y</span>
-                    <input />
+                    <div style="display: flex; flex-direction: column;">
+                        <span>Symbol</span>
+                        <div>
+                            <span>Map to: </span>
+                            <input />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <span>Function</span>
-                <div>
+                <div style="display: flex; flex-direction: row; align-items: center;">
                     <span>f</span>
-                    <input />
+                    <div style="display: flex; flex-direction: column;">
+                        <div>
+                            <span>Function</span>
+                            <button>Symbol</button>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Map to: </span>
+                                <input />
+                            </div>
+                            <div>
+                                <span>Function Details</span>
+                                <button>V</button>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
